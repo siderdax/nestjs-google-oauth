@@ -5,7 +5,7 @@ import { PassportModule } from '@nestjs/passport';
 import { GoogleSerializer } from './google.serializer';
 
 @Module({
-  imports: [PassportModule.register({ session: true })],
+  imports: [PassportModule],
   providers: [GauthService, GoogleOAuthStrategy, GoogleSerializer],
 })
 export class GauthModule {}
